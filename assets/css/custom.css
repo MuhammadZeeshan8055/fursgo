@@ -1,7 +1,8 @@
 @font-face {
   font-family: "Playfair Display";
-  src: url("../fonts/Playfair_Display/static/PlayfairDisplay-Black.ttf") format("truetype");
+  src: url("../fonts/Playfair_Display/static/PlayfairDisplay-SemiBold.ttf") format("truetype");
   font-style: normal;
+  font-weight: 400;
 }
 
 @font-face {
@@ -214,7 +215,7 @@ img {
   font-size: 45px;
   font-style: italic;
   line-height: 60px;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .inverted-radius {
