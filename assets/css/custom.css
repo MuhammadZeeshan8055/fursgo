@@ -162,7 +162,10 @@ img {
   background: var(--primary-accent);
   color: #FFF;
 }
-
+.find-space.active {
+  background: var(--primary-accent);
+  color: #FFF;
+}
 .find-groomer-content-area {
   position: absolute;
   width: 1030px;
@@ -170,6 +173,18 @@ img {
   border-radius: 0 0 10px 10px;
   background: #FDFCF8;
   box-shadow: 0 5px 55px 0 rgba(0, 0, 0, 0.05);
+}
+.find-space-content-area {
+    position: absolute;
+    width: 1030px;
+    height: 235px;
+    border-radius: 0 0 10px 10px;
+    background: #FDFCF8;
+    box-shadow: 0 5px 55px 0 rgba(0, 0, 0, 0.05);
+    top: 100%; /* aligns below the button */
+    left: 0;
+    display: none; /* hidden by default */
+    z-index: 10;
 }
 
 .pet-type-wrapper {
@@ -202,7 +217,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2px;
+  gap: 10px;
   color: var(--text-muted);
   transition: all 0.2s ease;
 
