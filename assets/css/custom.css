@@ -39,6 +39,10 @@
 :root {
   --primary-accent: #FBAC83;
   --font-color: #3B3731;
+  --border-color: #e5e5e5;
+  --active-bg: #ffc77d;
+  --text-dark: #333;
+  --text-muted: #bbb;
 }
 
 * {
@@ -157,8 +161,72 @@ img {
   border-radius: 0 0 10px 10px;
   background: #FDFCF8;
   box-shadow: 0 5px 55px 0 rgba(0, 0, 0, 0.05);
-  display: none;
 }
+
+.pet-type-wrapper {
+  max-width: 280px;
+  font-family: system-ui, sans-serif;
+}
+
+.label {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--text-dark);
+}
+
+.pet-toggle {
+  display: flex;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.pet-option {
+  flex: 1;
+  padding: 12px 14px;
+  height: 48px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  color: var(--text-muted);
+  transition: all 0.2s ease;
+
+  font-family: "Lato";
+  font-size: 18px;
+  font-style: normal;
+  line-height: normal;
+}
+
+.pet-option span {
+  font-weight: 400;
+}
+
+.pet-option:not(:last-child) {
+  border-right: 1px solid var(--border-color);
+}
+
+/* Active state */
+.pet-option.active {
+  color: var(--text-dark);
+}
+
+/* Highlighted (Other) */
+.pet-option.highlight {
+  background: var(--active-bg);
+  color: #fff;
+}
+
+/* Hover only when NOT active */
+.pet-option:not(.pet-option.highlight):hover {
+  background: rgba(0, 0, 0, 0.03);
+}
+
 
 .find-space {
   color: var(--font-color);
@@ -174,10 +242,10 @@ img {
 }
 
 .select-box-first-row {
-  padding: 50px;
+  padding: 25px 0 0 30px;
   display: flex;
   align-items: center;
-  gap: 50px;
+  gap: 25px;
 }
 
 .select-box-first-row select {
@@ -443,8 +511,8 @@ img {
 }
 
 .how-it-works-images {
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
 }
 
 .how-it-works-grid {
