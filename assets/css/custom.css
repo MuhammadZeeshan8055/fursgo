@@ -109,7 +109,7 @@ nav ul a.active {
   font-family: "Lato";
   font-size: 18px;
   font-style: normal;
-  line-height: normal;
+  text-align: center;
   border-radius: 25px;
   cursor: pointer;
 }
@@ -153,7 +153,7 @@ img {
   font-family: "Lato";
   font-size: 18px;
   font-weight: 400;
-  line-height: normal;
+  text-align: center;
   border-top-left-radius: 10px;
   cursor: pointer;
 }
@@ -229,7 +229,7 @@ img {
   font-family: "Lato";
   font-size: 18px;
   font-style: normal;
-  line-height: normal;
+  text-align: center;
 }
 
 .pet-option span {
@@ -329,7 +329,7 @@ img {
   font-family: "Lato";
   font-size: 18px;
   font-weight: 400;
-  line-height: normal;
+  text-align: center;
   border-top-right-radius: 10px;
   cursor: pointer;
 }
@@ -431,7 +431,6 @@ img {
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
   color: var(--text-muted);
 }
 
@@ -504,7 +503,7 @@ img {
   font-size: 30px;
   font-style: normal;
   font-weight: 700;
-  line-height: normal;
+  text-align: center;
 }
 
 .rating-sub-text {
@@ -514,7 +513,7 @@ img {
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  text-align: center;
 }
 
 .text-center {
@@ -527,7 +526,7 @@ img {
   font-size: 56px;
   font-style: normal;
   font-weight: 700;
-  line-height: normal;
+  text-align: center;
 }
 
 .text-styling .groom {
@@ -616,7 +615,7 @@ img {
   font-size: 56px;
   font-style: normal;
   font-weight: 900;
-  line-height: normal;
+  text-align: center;
 }
 
 .how-it-works span {
@@ -625,7 +624,7 @@ img {
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  text-align: center;
 }
 
 .how-it-works .img-fluid img {
@@ -724,7 +723,7 @@ img {
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
-  line-height: normal;
+  text-align: center;
 }
 
 .how-it-works-image-content-area .content span {
@@ -733,7 +732,7 @@ img {
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  text-align: center;
 }
 
 section.rating-section.section {
@@ -792,6 +791,94 @@ section.rating-section.section {
   max-width: 300px;
   display: block;
   margin: 0 auto;
+}
+
+.popular-services-heading {
+  color: var(--font-color);
+  text-align: right;
+  font-family: "Playfair Display";
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 900;
+  text-align: center;
+}
+
+.popular-section span {
+  color: var(--font-color);
+  font-family: "Lato";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+}
+
+.popular-services-content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+}
+
+.popular-content-area {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.popular-content-area .image-wrapper {
+  width: 230px;
+  height: 230px;
+}
+
+.popular-content-area .image-wrapper.oval {
+  overflow: hidden;
+  border-top-left-radius: 40%;
+  border-top-right-radius: 40%;
+}
+
+.popular-content-area .image-wrapper.circle {
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.popular-content-area .image-wrapper.rectangle {
+  overflow: hidden;
+  border-top-left-radius: 10%;
+  border-bottom-left-radius: 10%;
+  border-top-right-radius: 10%;
+  border-bottom-right-radius: 10%;
+}
+
+.popular-content-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.text-area {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.text-area p {
+  color: var(--font-color);
+  text-align: center;
+  font-family: "Playfair Display";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.text-area span {
+  color: var(--font-color);
+  font-family: "Lato";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
 }
 
 @media (max-width: 991px) {
