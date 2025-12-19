@@ -16,3 +16,24 @@ spaceBtn.addEventListener('click', () => {
     spaceBtn.classList.add('active');
     groomerBtn.classList.remove('active');
 });
+
+
+function toggleActive(containerSelector, itemSelector, activeClass) {
+    
+    const items = document.querySelectorAll(`${containerSelector} ${itemSelector}`);
+
+    items.forEach(item => {
+        item.addEventListener("click", () => {
+            items.forEach(button => button.classList.remove(activeClass));
+            item.classList.add(activeClass);
+        });
+    });
+}
+
+// Find Groomer
+toggleActive(".find-grommer-content", ".pet-option", "highlight");
+toggleActive(".find-grommer-content", ".weight-option", "active");
+
+// Find Space
+toggleActive(".find-space-content", ".pet-option", "highlight");
+toggleActive(".find-space-content", ".weight-option", "active");

@@ -57,6 +57,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 nav {
@@ -879,6 +880,59 @@ section.rating-section.section {
   font-style: normal;
   font-weight: 400;
   text-align: center;
+}
+
+.our-mission {
+  background: #FDFCF8;
+  height: 500px;
+  border-radius: 10px;
+}
+
+.content-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-heading {
+  color: var(--font-color);
+  text-align: center;
+  font-family: "Playfair Display";
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  margin-bottom: 8%;
+}
+
+.description {
+  color: var(--font-color);
+  margin-bottom: 6%;
+  text-align: center;
+  font-family: Lato;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 400px;
+}
+
+.action-button {
+  padding: 10px 35px 10px 35px;
+  color: var(--font-color);
+  background: none;
+  border: 1px solid var(--font-color);
+  border-radius: 5px;
+  font-family: "Lato";
+  font-size: 18px;
+  font-style: normal;
+  text-align: center;
+  border-radius: 25px;
+  cursor: pointer;
+  background-color: var(--primary-accent);
+  color: white;
+  border: none;
 }
 
 @media (max-width: 991px) {
