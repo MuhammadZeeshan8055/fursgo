@@ -281,7 +281,7 @@ toggleActive(".find-space-content", ".weight-option", "active");
             document.querySelectorAll('.field.time').forEach(f => f.style.borderBottomRightRadius = '10px');
         }
     });
-    
+
     // Escape key closes
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
