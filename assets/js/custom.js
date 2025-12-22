@@ -1,3 +1,13 @@
+const toggleBtn = document.querySelector('.menu-toggle');
+const menu = document.querySelector('.menu-items');
+const header = document.querySelector('.logo-toggle-button');
+
+toggleBtn.addEventListener('click', () => {
+    menu.classList.toggle('active');
+    header.classList.toggle('fixed');
+    document.body.classList.toggle('menu-open');
+});
+
 const groomerBtn = document.querySelector('.find-groomer');
 const spaceBtn = document.querySelector('.find-space');
 const groomerContent = document.querySelector('.find-groomer-content-area');

@@ -964,20 +964,18 @@ section.rating-section.section {
     }
 }
 
-
 /* Responsive for small screens */
 @media (max-width: 991px) {
 
     nav.navbar {
         padding: 20px;
-        position: sticky;
-        top: 0;
-        z-index: 999;
         background: #fff;
         /* required */
     }
 
-
+    body.menu-open {
+        overflow: hidden;
+    }
 
     .menu-toggle {
         display: block;
@@ -1076,5 +1074,18 @@ section.rating-section.section {
     .popular-content-area .image-wrapper {
         width: 280px;
         height: 280px;
+    }
+
+    .how-up-arrow, .how-down-arrow {
+        margin: 100px 0 100px 0;
+    }
+    .how-up-arrow svg {
+        transform: rotate(89deg) translateY(42px);
+        transform-origin: center;
+    }
+
+    .how-down-arrow svg {
+        transform: rotate(89deg) translateY(-42px);
+        transform-origin: center;
     }
 }
