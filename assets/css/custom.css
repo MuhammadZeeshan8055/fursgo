@@ -919,7 +919,7 @@ section.rating-section.section {
 }
 
 .action-button {
-  padding: 10px 35px 10px 35px;
+  padding: 15px 35px 15px 35px;
   color: var(--font-color);
   background: none;
   border: 1px solid var(--font-color);
