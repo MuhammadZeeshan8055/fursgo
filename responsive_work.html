@@ -138,7 +138,7 @@
                                             <div class="service-select-wrapper">
                                                 <p class="label">Select Service Type</p>
 
-                                                <div class="select-container">
+                                                <!-- <div class="select-container">
                                                     <select id="serviceType" class="service-select">
                                                         <option value="" disabled selected hidden>
                                                             Full Grooming, Pet Spa ...
@@ -149,6 +149,25 @@
                                                         <option value="bath-and-wash">Bath & Wash</option>
                                                         <option value="nail-trim">Nail Trim</option>
                                                     </select>
+                                                </div> -->
+                                                <div class="custom-select">
+                                                    <div class="select-trigger">
+                                                        <span class="selected-text">Full Groom, Face Trim ...</span>
+                                                        <svg width="16" height="16" viewBox="0 0 24 24">
+                                                            <path d="M6 9l6 6 6-6" fill="none" stroke="#666"
+                                                                stroke-width="2" />
+                                                        </svg>
+                                                    </div>
+
+                                                    <ul class="select-options">
+                                                        <li data-value="full-groom">Full Groom</li>
+                                                        <li data-value="face-trim-only">Face Trim Only</li>
+                                                        <li data-value="tail-trim-only">Tail Trim Only</li>
+                                                        <li data-value="bath-and-wash">Bath & Brush</li>
+                                                        <li data-value="nail-trim">Nail Trim</li>
+                                                    </ul>
+
+                                                    <input type="hidden" name="locationType">
                                                 </div>
                                             </div>
 
@@ -303,18 +322,26 @@
                                             <div class="service-select-wrapper">
                                                 <p class="label">Select Space Type</p>
 
-                                                <div class="select-container">
-                                                    <select id="serviceType" class="service-select">
-                                                        <option value="" disabled selected hidden>
-                                                            Private Rooms, Salon...
-                                                        </option>
-                                                        <option value="private-rooms">Private Rooms</option>
-                                                        <option value="salon">Salon</option>
-                                                        <option value="mobile-station">Mobile Station</option>
-                                                        <option value="garden/shed">Garder / Shed</option>
-                                                        <option value="others">Others</option>
-                                                    </select>
+                                                <div class="custom-select">
+                                                    <div class="select-trigger">
+                                                        <span class="selected-text">Private Rooms, Salon...</span>
+                                                        <svg width="16" height="16" viewBox="0 0 24 24">
+                                                            <path d="M6 9l6 6 6-6" fill="none" stroke="#666"
+                                                                stroke-width="2" />
+                                                        </svg>
+                                                    </div>
+
+                                                    <ul class="select-options">
+                                                        <li data-value="private-rooms">Private Rooms</li>
+                                                        <li data-value="salon">Salon</li>
+                                                        <li data-value="mobile-station">Mobile Station</li>
+                                                        <li data-value="garden/shed">Garden / Shed</li>
+                                                        <li data-value="others">Others</li>
+                                                    </ul>
+
+                                                    <input type="hidden" name="locationType">
                                                 </div>
+
                                             </div>
 
                                         </div>

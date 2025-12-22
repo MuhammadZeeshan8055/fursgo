@@ -29,7 +29,7 @@ spaceBtn.addEventListener('click', () => {
 
 
 function toggleActive(containerSelector, itemSelector, activeClass) {
-    
+
     const items = document.querySelectorAll(`${containerSelector} ${itemSelector}`);
 
     items.forEach(item => {
@@ -54,7 +54,7 @@ toggleActive(".find-space-content", ".weight-option", "active");
 (function () {
     // Find all datetime-wrapper instances
     const datetimeWrappers = document.querySelectorAll('.datetime-wrapper');
-    
+
     datetimeWrappers.forEach((wrapper, index) => {
         // Get elements within this specific wrapper
         const dateField = wrapper.querySelector('.field.date');
@@ -151,7 +151,7 @@ toggleActive(".find-space-content", ".weight-option", "active");
             return a && b && a.getFullYear() === b.getFullYear() && a.getMonth() === b.getMonth() && a.getDate() === b.getDate();
         }
         function isToday(d) {
-            const t = new Date(); 
+            const t = new Date();
             return isSameDate(d, t);
         }
 
@@ -195,7 +195,7 @@ toggleActive(".find-space-content", ".weight-option", "active");
             dateField.style.borderBottomLeftRadius = '0px';
             timeField.style.borderBottomRightRadius = '0px';
         }
-        
+
         function closePopover(pop) {
             pop.style.display = 'none';
             if (pop.previousElementSibling) pop.previousElementSibling.setAttribute('aria-expanded', 'false');
@@ -203,7 +203,7 @@ toggleActive(".find-space-content", ".weight-option", "active");
             dateField.style.borderBottomLeftRadius = '10px';
             timeField.style.borderBottomRightRadius = '10px';
         }
-        
+
         function closeAllPopovers() {
             document.querySelectorAll('.popover').forEach(p => p.style.display = 'none');
             document.querySelectorAll('.input-row').forEach(r => r.setAttribute('aria-expanded', 'false'));
@@ -215,10 +215,10 @@ toggleActive(".find-space-content", ".weight-option", "active");
         // Attach open handlers
         dateField.querySelector('.input-row').addEventListener('click', (e) => {
             const isOpen = datePopover.style.display === 'block';
-            if (isOpen) closePopover(datePopover); 
+            if (isOpen) closePopover(datePopover);
             else openPopover(datePopover);
         });
-        
+
         dateField.querySelector('.input-row').addEventListener('keydown', (e) => {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
@@ -247,7 +247,7 @@ toggleActive(".find-space-content", ".weight-option", "active");
             if (viewMonth < 0) { viewMonth = 11; viewYear--; }
             renderCalendar(viewYear, viewMonth);
         });
-        
+
         nextMonthBtn.addEventListener('click', () => {
             viewMonth++;
             if (viewMonth > 11) { viewMonth = 0; viewYear++; }
@@ -260,7 +260,7 @@ toggleActive(".find-space-content", ".weight-option", "active");
             renderCalendar(viewYear, viewMonth);
             generateTimes();
             dateInput.value = formatDateForInput(selectedDate);
-            
+
             setTimeout(() => {
                 const el = timeList.querySelector(`.time-item[data-time="${selectedTime}"]`);
                 if (el) el.classList.add('selected');
@@ -292,3 +292,62 @@ toggleActive(".find-space-content", ".weight-option", "active");
         }
     });
 })();
+
+
+// custom select dropdown js  
+
+document.querySelectorAll('.custom-select').forEach(select => {
+    const trigger = select.querySelector('.select-trigger');
+    const options = select.querySelectorAll('.select-options li');
+    const text = select.querySelector('.selected-text');
+    const hiddenInput = select.querySelector('input[type="hidden"]');
+
+    trigger.addEventListener('click', e => {
+        e.stopPropagation();
+
+        // close other selects & reset their radius
+        document.querySelectorAll('.custom-select').forEach(s => {
+            if (s !== select) {
+                s.classList.remove('open');
+                const t = s.querySelector('.select-trigger');
+                t.style.cssText = `
+                    border-bottom-left-radius: 12px;
+                    border-bottom-right-radius: 12px;
+                `;
+            }
+        });
+
+        // toggle current
+        const isOpen = select.classList.toggle('open');
+
+        trigger.style.cssText = isOpen
+            ? `border-bottom-left-radius: 0; border-bottom-right-radius: 0;`
+            : `border-bottom-left-radius: 12px; border-bottom-right-radius: 12px;`;
+    });
+
+    options.forEach(option => {
+        option.addEventListener('click', () => {
+            text.textContent = option.textContent;
+            text.style.color = '#333';
+            hiddenInput.value = option.dataset.value;
+
+            select.classList.remove('open');
+            trigger.style.cssText = `
+                border-bottom-left-radius: 12px;
+                border-bottom-right-radius: 12px;
+            `;
+        });
+    });
+});
+
+// click outside
+document.addEventListener('click', () => {
+    document.querySelectorAll('.custom-select').forEach(select => {
+        select.classList.remove('open');
+        const trigger = select.querySelector('.select-trigger');
+        trigger.style.cssText = `
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+        `;
+    });
+});
