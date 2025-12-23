@@ -980,6 +980,11 @@ section.rating-section.section {
     border: none;
 }
 
+.fursgo-address-map {
+    position: relative;
+    height: 628px;
+}
+
 p.fursgo-address-heading {
     color: var(--font-color);
     font-family: "Playfair Display";
@@ -1001,10 +1006,10 @@ p.fursgo-address-heading {
 
 .fursgo-map-image-wrapper {
     width: 955px;
-    height: 628px;
     float: right;
-    position: relative;
-    margin-top: -22%;
+    position: absolute;
+    right: 0;
+    top: 2%;
 }
 
 ul.fursgo-locations {
@@ -1085,6 +1090,120 @@ ul.fursgo-locations li {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+}
+
+@media (max-width: 1199px) and (min-width: 991px) {
+    nav ul a {
+        font-size: 16px;
+    }
+
+    .login-btn,
+    .signup-btn {
+        padding: 5px 20px 5px 20px;
+        font-size: 16px;
+    }
+
+    .select-box-first-row,
+    .select-box-second-row {
+        display: flex;
+        flex-wrap: wrap;
+        /* allow items to move to next line */
+        gap: 20px;
+        /* spacing between items */
+    }
+
+    .find-groomer-content-area,
+    .find-space-content-area {
+        width: 813px;
+        /* reduce width slightly */
+        height: auto;
+        /* let it grow with content */
+        padding: 15px 20px;
+        /* optional for spacing */
+    }
+
+    .pet-type-wrapper,
+    .pet-weight-wrapper,
+    .service-select-wrapper {
+        max-width: 250px;
+        /* slightly smaller than desktop */
+    }
+
+    .label {
+        font-size: 16px;
+        /* smaller label font */
+    }
+
+    .pet-option,
+    .weight-option {
+        font-size: 16px;
+        /* reduce font for buttons */
+        padding: 10px 12px;
+        height: 44px;
+        /* slightly shorter buttons */
+    }
+
+    .pet-option span,
+    .weight-option span {
+        font-weight: 400;
+    }
+
+    .custom-select .select-trigger {
+        font-size: 16px;
+        /* dropdown text size */
+    }
+
+    .search-box input {
+        font-size: 16px;
+        /* input font smaller */
+        padding: 10px 12px;
+    }
+
+    .submit-button .form-submit-button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    /* Optional: adjust spacing between fields */
+    .select-box-first-row,
+    .select-box-second-row {
+        gap: 12px;
+    }
+
+    .search-box {
+        width: 250px;
+    }
+
+    .field {
+        padding: 7px 13px !important;
+    }
+
+    .field.date {
+        width: 220px !important;
+    }
+
+    .popover {
+        width: 347px !important;
+    }
+
+    section.rating-section.section {
+        padding: 500px 0 0 0px;
+    }
+
+    .how-it-works-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .how-arrow {
+        transform: rotate(90deg);
+        margin: 0 auto;
+    }
+
+    .how-it-works {
+        height: auto;
+    }
+
 }
 
 @media (max-width: 991px) {
@@ -1231,6 +1350,14 @@ ul.fursgo-locations li {
         padding: 5px 10px 5px 10px;
         margin-top: 10%;
     }
+
+    .fursgo-map-image-wrapper {
+        width: auto;
+        float: right;
+        position: absolute;
+        right: 0;
+        top: 65%;
+    }
 }
 
 
@@ -1254,6 +1381,7 @@ ul.fursgo-locations li {
 .field.date {
     max-width: 280px;
     width: 242px;
+    height: 48px;
     border-bottom-left-radius: 10px;
     border-top-left-radius: 12px;
 }
@@ -1261,6 +1389,7 @@ ul.fursgo-locations li {
 .field.time {
     max-width: 220px;
     width: 128px;
+    height: 48px;
     border-bottom-right-radius: 10px;
     border-top-right-radius: 12px;
 }
