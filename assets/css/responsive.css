@@ -980,6 +980,55 @@ section.rating-section.section {
     border: none;
 }
 
+p.fursgo-address-heading {
+    color: var(--font-color);
+    font-family: "Playfair Display";
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+
+.fursgo-sub-heading {
+    color: var(--font-color);
+    font-family: "Lato";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 2%;
+}
+
+.fursgo-map-image-wrapper {
+    width: 955px;
+    height: 628px;
+    float: right;
+    position: relative;
+    margin-top: -22%;
+}
+
+ul.fursgo-locations {
+    margin-top: 2%;
+}
+
+ul.fursgo-locations li {
+    color: var(--font-color);
+    font-family: "Lato";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.fursgo-address-map .link {
+    color: var(--font-color);
+    font-family: "Lato";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    margin-top: 2%;
+}
+
 .join-heading {
     color: var(--font-color);
     font-family: "Playfair Display";
