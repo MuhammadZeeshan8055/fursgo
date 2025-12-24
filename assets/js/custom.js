@@ -299,11 +299,16 @@ toggleActive(".find-space-content", ".weight-option", "active");
 document.querySelectorAll('.custom-select').forEach(select => {
     const trigger = select.querySelector('.select-trigger');
     const options = select.querySelectorAll('.select-options li');
+    const datePopovers = document.querySelectorAll('.popover');
     const text = select.querySelector('.selected-text');
     const hiddenInput = select.querySelector('input[type="hidden"]');
 
     trigger.addEventListener('click', e => {
         e.stopPropagation();
+
+        datePopovers.forEach(popover => {
+            popover.style.display = 'none';
+        });
 
         // close other selects & reset their radius
         document.querySelectorAll('.custom-select').forEach(s => {

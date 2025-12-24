@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fursgo</title>
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
 
@@ -208,11 +208,30 @@
                                                                     <div class="month-nav">
                                                                         <button type="button" id="prevMonth"
                                                                             title="Previous month"
-                                                                            aria-label="Previous month">&#9664;</button>
+                                                                            aria-label="Previous month">
+                                                                            <svg class="chev rotate-left"
+                                                                                viewBox="0 0 24 24" fill="none"
+                                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                                <path d="M6 9l6 6 6-6" stroke="#444"
+                                                                                    stroke-width="1.6"
+                                                                                    stroke-linecap="round"
+                                                                                    stroke-linejoin="round" />
+                                                                            </svg>
+                                                                        </button>
+
                                                                         <div id="monthLabel">November 2025</div>
+
                                                                         <button type="button" id="nextMonth"
-                                                                            title="Next month"
-                                                                            aria-label="Next month">&#9654;</button>
+                                                                            title="Next month" aria-label="Next month">
+                                                                            <svg class="chev rotate-right"
+                                                                                viewBox="0 0 24 24" fill="none"
+                                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                                <path d="M6 9l6 6 6-6" stroke="#444"
+                                                                                    stroke-width="1.6"
+                                                                                    stroke-linecap="round"
+                                                                                    stroke-linejoin="round" />
+                                                                            </svg>
+                                                                        </button>
                                                                     </div>
                                                                     <div class="weekday-row" id="weekdayRow"></div>
                                                                     <div class="days-grid" id="daysGrid"></div>
@@ -496,16 +515,16 @@
     <section class="section">
         <div class="container">
             <div class="row d-flex">
-                <div class="col-lg-4">
+                <div class="col-lg-4 p-0 m-0">
                     <p class="text-styling">
                         <span class="groom">Groom</span> from anywhere<span class="dot1">.</span>
                         <br>
-                        <span class="book">Book</span> from anywhere<span class="dot2">.</span>.
+                        <span class="book">Book</span> from anywhere<span class="dot2">.</span>
                         <br>
                         <span class="earn">Earn</span> from anywhere<span class="dot3">.</span>
                     </p>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 p-0 m-0">
                     <div class="img-fluid">
                         <img src="assets/images/dog.png" alt="" style="border-radius: 10px;">
                     </div>
@@ -743,9 +762,10 @@
     <section class="section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-1 d-flex">
+                <div class="col-lg-1 d-flex justify-content-xs-center">
 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="47" height="66" viewBox="0 0 47 66" fill="none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="47" height="66" viewBox="0 0 47 66" fill="none"
+                        style="margin-top: 18%;">
                         <path
                             d="M23.5 31.35C21.2741 31.35 19.1393 30.4808 17.5654 28.9336C15.9914 27.3865 15.1071 25.288 15.1071 23.1C15.1071 20.912 15.9914 18.8135 17.5654 17.2664C19.1393 15.7192 21.2741 14.85 23.5 14.85C25.7259 14.85 27.8607 15.7192 29.4346 17.2664C31.0086 18.8135 31.8929 20.912 31.8929 23.1C31.8929 24.1834 31.6758 25.2562 31.254 26.2571C30.8322 27.2581 30.214 28.1675 29.4346 28.9336C28.6553 29.6997 27.7301 30.3074 26.7118 30.722C25.6935 31.1366 24.6022 31.35 23.5 31.35ZM23.5 0C17.2674 0 11.2901 2.43374 6.88299 6.76583C2.47589 11.0979 0 16.9735 0 23.1C0 40.425 23.5 66 23.5 66C23.5 66 47 40.425 47 23.1C47 16.9735 44.5241 11.0979 40.117 6.76583C35.7099 2.43374 29.7326 0 23.5 0Z"
                             fill="#FFC97A" />
@@ -822,7 +842,7 @@
                     </div>
 
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 mt-xs-5">
                     <div class="footer-description">
                         <p>Join Fursgo to grow your business with verified bookings and loyal clients.
                             <br>
@@ -831,7 +851,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-6 d-flex justify-content-end" style="gap: 45px;">
+                <div class="col-lg-6 mt-xs-5 d-flex justify-content-end" style="gap: 45px;">
                     <div class="help-center">
                         <ul class="footer-list">
                             <li><a href="#"><b>Help Center</b></a></li>
@@ -861,7 +881,7 @@
                 </div>
             </div>
             <div class="row mt-5 pt-3 mb-3">
-                <div class="col-lg-12 d-flex align-items-center justify-content-between pt-3">
+                <div class="col-lg-12 flex-xs-wrap d-flex align-items-center justify-content-between pt-3">
                     <div class="social-icons d-flex" style="gap: 35px;">
                         <a href="#">
                             <svg xmlns="http://www.w3.org/2000/svg" width="13" height="22" viewBox="0 0 13 22"
@@ -896,7 +916,7 @@
                             </svg>
                         </a>
                     </div>
-                    <div class="terms-and-conditions-text">
+                    <div class="terms-and-conditions-text mt-xs-5">
                         <p> <a href="#">Terms & Conditions </a> | <a href="#">Privacy Policy</a> | <a href="#">Cookie
                                 Policy</a></p>
                     </div>

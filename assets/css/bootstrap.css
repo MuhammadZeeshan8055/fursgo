@@ -2022,7 +2022,21 @@
     padding-left: 3rem !important
 }
 
-@media (min-width: 576px) {
+@media (max-width: 430px) {
+    .flex-xs-wrap {
+        flex-wrap: wrap !important
+    }
+
+    .mt-xs-5 {
+        margin-top: 3rem !important;
+    }
+
+    .justify-content-xs-center {
+        justify-content: center !important
+    }
+}
+
+@media (min-width: 430px) {
     .d-sm-inline {
         display: inline !important
     }
